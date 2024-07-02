@@ -1,0 +1,21 @@
+package pl.edu.pwr.abis.domain.dataTypes;
+
+import jakarta.persistence.Basic;
+import jakarta.persistence.Embeddable;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Embeddable
+public class Data {
+
+    @Basic
+    private long dzien;
+
+    @Basic
+    private long miesiac;
+
+    @Basic
+    private long rok;
+}
