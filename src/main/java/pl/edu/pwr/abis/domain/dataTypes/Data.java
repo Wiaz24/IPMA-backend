@@ -18,4 +18,10 @@ public class Data {
 
     @Basic
     private long rok;
+
+    public Data(long dzien, long miesiac, long rok) {
+        this.dzien = dzien;
+        this.miesiac = miesiac;
+        this.rok = rok;
+    }
 }
