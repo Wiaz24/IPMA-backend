@@ -22,6 +22,7 @@ public class CompetitionService {
         EdycjaKonkursu competition = new EdycjaKonkursu();
 
         // competition.setKosztUczestnictwa(dto.getKosztUczestnictwa()); // Die Teilnahmekosten sind statisch
+        competition.setId(dto.getId());
         competition.setNumerEdycji(dto.getNumerEdycji());
         competition.setCzyAktywna(dto.isCzyAktywna());
         competition.setDataZgloszeniaAplikacji(dto.getDataZgloszeniaAplikacji().toData());
@@ -31,7 +32,7 @@ public class CompetitionService {
         competition.setDataOpracowaniaOcenyKoncowej(dto.getDataOpracowaniaOcenyKoncowej().toData());
         competition.setDataOpracowaniaRaportuWizyty(dto.getDataOpracowaniaRaportuWizyty().toData());
         competition.setDataWizytyStudyjnej(dto.getDataWizytyStudyjnej().toData());
-        competition.setTerminUroczystocci(dto.getTerminUroczystocci().toData());
+        competition.setTerminUroczystosci(dto.getTerminUroczystosci().toData());
         competition.setMiejsceUroczystosci(dto.getMiejsceUroczystosci());
         competition.setUlotkaPPEA(dto.getUlotkaPPEA().toDokument());
         competition.setRegulamin(dto.getRegulamin().toDokument());

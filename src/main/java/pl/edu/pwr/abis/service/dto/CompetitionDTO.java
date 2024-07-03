@@ -32,7 +32,7 @@ public class CompetitionDTO implements Serializable {
         dataOpracowaniaOcenyKoncowej = new DataDTO(edycjaKonkursu.getDataOpracowaniaOcenyKoncowej());
         dataOpracowaniaRaportuWizyty = new DataDTO(edycjaKonkursu.getDataOpracowaniaRaportuWizyty());
         dataWizytyStudyjnej = new DataDTO(edycjaKonkursu.getDataWizytyStudyjnej());
-        terminUroczystocci = new DataDTO(edycjaKonkursu.getTerminUroczystocci());
+        terminUroczystosci = new DataDTO(edycjaKonkursu.getTerminUroczystosci());
         miejsceUroczystosci = edycjaKonkursu.getMiejsceUroczystosci();
         ulotkaPPEA = new DokumentDTO(edycjaKonkursu.getUlotkaPPEA());
         regulamin = new DokumentDTO(edycjaKonkursu.getRegulamin());
@@ -63,7 +63,7 @@ public class CompetitionDTO implements Serializable {
 
     private DataDTO dataWizytyStudyjnej;
 
-    private DataDTO terminUroczystocci;
+    private DataDTO terminUroczystosci;
 
     private String miejsceUroczystosci;
 
@@ -165,12 +165,12 @@ public class CompetitionDTO implements Serializable {
         this.dataWizytyStudyjnej = dataWizytyStudyjnej;
     }
 
-    public DataDTO getTerminUroczystocci() {
-        return terminUroczystocci;
+    public DataDTO getTerminUroczystosci() {
+        return terminUroczystosci;
     }
 
-    public void setTerminUroczystocci(DataDTO terminUroczystocci) {
-        this.terminUroczystocci = terminUroczystocci;
+    public void setTerminUroczystosci(DataDTO terminUroczystosci) {
+        this.terminUroczystosci = terminUroczystosci;
     }
 
     public String getMiejsceUroczystosci() {
