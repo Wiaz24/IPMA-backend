@@ -1,16 +1,13 @@
 package pl.edu.pwr.abis.service.dto;
 
 import java.io.Serializable;
-import java.util.Set;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-import pl.edu.pwr.abis.domain.classes.BiuroNagrody;
 import pl.edu.pwr.abis.domain.classes.EdycjaKonkursu;
-import pl.edu.pwr.abis.domain.classes.JuryNagrody;
-import pl.edu.pwr.abis.domain.classes.Webinarium;
-import pl.edu.pwr.abis.domain.classes.WniosekAplikacyjny;
-import pl.edu.pwr.abis.domain.dataTypes.Dokument;
 @Getter
 @Setter
 public class CompetitionDTO implements Serializable {
@@ -43,69 +40,86 @@ public class CompetitionDTO implements Serializable {
 
     private Long id;
 
-    private double kosztUczestnictwa;
+    private Double kosztUczestnictwa;
 
-    private long numerEdycji;
+    //value must be bigger than 0
+    @Min(value = 1)
+    private Long numerEdycji;
 
-    private boolean czyAktywna = false;
+    private Boolean czyAktywna = false;
 
+    //validate DataDTO
+    @Valid
     private DataDTO dataZgloszeniaAplikacji;
 
+    @Valid
     private DataDTO dataDostarczeniaRaportu;
 
+    @Valid
     private DataDTO dataOpracowaniaOcenyIndywidualnej;
 
+    @Valid
     private DataDTO dataOpracowaniaOcenyWstepnej;
 
+    @Valid
     private DataDTO dataOpracowaniaOcenyKoncowej;
 
+    @Valid
     private DataDTO dataOpracowaniaRaportuWizyty;
 
+    @Valid
     private DataDTO dataWizytyStudyjnej;
 
+    @Valid
     private DataDTO terminUroczystosci;
 
+    @Size(min = 5, max = 254)
     private String miejsceUroczystosci;
 
+    @Valid
     private DokumentDTO ulotkaPPEA;
 
+    @Valid
     private DokumentDTO regulamin;
 
+    @Valid
     private DokumentDTO harmonogram;
 
+    @Valid
     private DokumentDTO listaFinalistow;
 
+    @Valid
     private DokumentDTO wyniki;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public double getKosztUczestnictwa() {
+    public Double getKosztUczestnictwa() {
         return kosztUczestnictwa;
     }
 
-    public void setKosztUczestnictwa(double kosztUczestnictwa) {
+    public void setKosztUczestnictwa(Double kosztUczestnictwa) {
         this.kosztUczestnictwa = kosztUczestnictwa;
     }
 
-    public long getNumerEdycji() {
+    public Long getNumerEdycji() {
         return numerEdycji;
     }
 
-    public void setNumerEdycji(long numerEdycji) {
+    public void setNumerEdycji(Long numerEdycji) {
         this.numerEdycji = numerEdycji;
     }
 
-    public boolean isCzyAktywna() {
+    public Boolean isCzyAktywna() {
         return czyAktywna;
     }
 
-    public void setCzyAktywna(boolean czyAktywna) {
+    public void setCzyAktywna(Boolean czyAktywna) {
         this.czyAktywna = czyAktywna;
     }
 

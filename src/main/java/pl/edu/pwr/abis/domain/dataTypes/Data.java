@@ -24,4 +24,7 @@ public class Data {
         this.miesiac = miesiac;
         this.rok = rok;
     }
+
+    public Data() {
+    }
 }

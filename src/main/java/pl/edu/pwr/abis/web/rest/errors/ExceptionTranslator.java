@@ -3,6 +3,7 @@ package pl.edu.pwr.abis.web.rest.errors;
 import static org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation;
 
 import jakarta.servlet.http.HttpServletRequest;
+
 import java.net.URI;
 import java.util.Arrays;
 import java.util.Collection;
@@ -87,6 +88,8 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
         if (ex instanceof pl.edu.pwr.abis.service.EmailAlreadyUsedException) return (ProblemDetailWithCause) new EmailAlreadyUsedException()
             .getBody();
         if (ex instanceof pl.edu.pwr.abis.service.InvalidPasswordException) return (ProblemDetailWithCause) new InvalidPasswordException()
+            .getBody();
+        if (ex instanceof pl.edu.pwr.abis.web.rest.errors.CompetitionNotFoundException) return (ProblemDetailWithCause) new CompetitionNotFoundException()
             .getBody();
 
         if (

@@ -1,5 +1,7 @@
 package pl.edu.pwr.abis.service.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import pl.edu.pwr.abis.domain.dataTypes.Data;
 
 // import jakarta.persistence.Basic;
@@ -8,10 +10,16 @@ public class DataDTO extends Serializable{
 
     private static final long serialVersionUID = 1L;
 
+    @Min(value = 1)
+    @Max(value = 31)
     private long dzien;
 
+    @Min(value = 1)
+    @Max(value = 12)
     private long miesiac;
 
+    @Min(value = 1900)
+    @Max(value = 2500)
     private long rok;
 
     public DataDTO() {

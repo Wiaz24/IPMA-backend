@@ -1,11 +1,13 @@
 package pl.edu.pwr.abis.service.dto;
 
+import jakarta.validation.constraints.Size;
 import pl.edu.pwr.abis.domain.dataTypes.Dokument;
 
 public class DokumentDTO extends Serializable{
 
     private static final long serialVersionUID = 1L;
 
+    @Size(min = 1, max = 254)
     private String format;
 
     public DokumentDTO() {
